@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<!-- GitHub Pages ready: upload this index.html together with the assets folder. -->
+<html lang="th">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#0a1726" />
+<title>The Butler Blueprint — V Villas Phuket Executive Summary</title>
+<style>
+:root{--ink:#0a1726;--ink2:#14283e;--ivory:#f5f1e9;--paper:#fbfaf7;--gold:#b89552;--gold2:#d4bb82;--line:rgba(184,149,82,.34);--muted:#6f746f;--shadow:0 28px 80px rgba(3,11,20,.18)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;background:var(--ink)}
+body{margin:0;color:var(--ink);background:var(--ivory);font-family:"Leelawadee UI","Noto Sans Thai",Tahoma,Arial,sans-serif;line-height:1.72;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+button{font:inherit}
+.serif{font-family:Georgia,"Times New Roman",serif}
+.shell{width:min(1180px,calc(100% - 64px));margin:auto}
+.eyebrow{font-size:11px;letter-spacing:.28em;text-transform:uppercase;font-weight:700;color:var(--gold)}
+.gold{color:var(--gold)}
+.muted{color:var(--muted)}
+
+/* top rail */
+.rail{position:fixed;inset:0 0 auto 0;z-index:60;height:66px;display:flex;align-items:center;background:linear-gradient(180deg,rgba(5,13,23,.82),rgba(5,13,23,.28),transparent);color:#fff;transition:.3s}
+.rail.scrolled{background:rgba(8,19,32,.94);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.08)}
+.rail-in{width:min(1180px,calc(100% - 48px));margin:auto;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand-mini{font:700 12px Georgia,serif;letter-spacing:.16em;text-transform:uppercase}
+.nav{display:flex;gap:6px;align-items:center}
+.nav a{text-decoration:none;font-size:12px;letter-spacing:.08em;padding:8px 12px;border-radius:999px;color:rgba(255,255,255,.76)}
+.nav a:hover{background:rgba(255,255,255,.09);color:#fff}
+.print{border:1px solid rgba(255,255,255,.24);background:rgba(255,255,255,.06);color:#fff;padding:8px 13px;border-radius:999px;cursor:pointer;font-size:12px}
+.print:hover{background:#fff;color:var(--ink)}
+
+/* page 1 */
+.hero{min-height:100svh;position:relative;display:grid;align-items:end;overflow:hidden;background:var(--ink)}
+.hero-bg{position:absolute;inset:0;background-image:linear-gradient(90deg,rgba(5,14,25,.91) 0%,rgba(5,14,25,.75) 38%,rgba(5,14,25,.28) 72%,rgba(5,14,25,.12) 100%),linear-gradient(0deg,rgba(5,14,25,.65),transparent 45%),url('assets/hero-aoyon.webp');background-size:cover;background-position:center;transform:scale(1.015)}
+.hero::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 76% 24%,rgba(221,192,126,.14),transparent 26%),linear-gradient(135deg,transparent 72%,rgba(184,149,82,.10));pointer-events:none}
+.hero-content{position:relative;z-index:2;color:#fff;padding:104px 0 62px;display:grid;grid-template-columns:1.25fr .75fr;gap:64px;align-items:end}
+.logo-card{display:inline-flex;align-items:center;justify-content:center;background:rgba(251,250,247,.94);padding:14px 20px;border-radius:2px;box-shadow:0 18px 60px rgba(0,0,0,.18);margin-bottom:34px}
+.logo-card img{width:102px;height:auto;display:block}
+.hero h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(52px,7.2vw,94px);line-height:.92;letter-spacing:-.045em;margin:8px 0 16px;font-weight:500}
+.hero h1 span{display:block;color:var(--gold2);font-style:italic;font-size:.76em;margin-top:11px}
+.hero .sub{max-width:760px;font-size:18px;color:rgba(255,255,255,.86);margin:0 0 24px}
+.hero .tagline{display:flex;gap:11px;flex-wrap:wrap}
+.pill{border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.07);backdrop-filter:blur(8px);color:#fff;border-radius:999px;padding:8px 13px;font-size:12px;letter-spacing:.04em}
+.hero-side{border-left:1px solid rgba(255,255,255,.20);padding-left:34px;margin-bottom:6px}
+.hero-side .num{font:500 54px Georgia,serif;color:var(--gold2);line-height:1}
+.hero-side p{font-size:13px;color:rgba(255,255,255,.74);margin:8px 0 27px;max-width:260px}
+.scroll-cue{position:absolute;z-index:4;right:32px;bottom:28px;color:rgba(255,255,255,.54);font-size:10px;letter-spacing:.18em;writing-mode:vertical-rl;text-transform:uppercase}
+.scroll-cue:after{content:"";display:inline-block;height:62px;width:1px;background:linear-gradient(var(--gold),transparent);margin-top:12px}
+
+/* editorial sections */
+.page{position:relative;min-height:100svh;padding:100px 0 90px;background:var(--paper);overflow:hidden}
+.page.dark{background:var(--ink);color:#fff}
+.page-no{position:absolute;right:5.2vw;top:70px;font:500 clamp(90px,14vw,190px)/1 Georgia,serif;color:rgba(184,149,82,.075);letter-spacing:-.07em;user-select:none}
+.section-head{display:grid;grid-template-columns:180px 1fr;gap:34px;align-items:start;margin-bottom:54px}
+.section-head h2{font:500 clamp(34px,4.6vw,62px)/1.05 Georgia,"Times New Roman",serif;letter-spacing:-.035em;margin:0;max-width:820px}
+.section-head p{margin:8px 0 0;max-width:820px;color:#6b716f}
+.dark .section-head p{color:rgba(255,255,255,.66)}
+.kicker{border-top:1px solid var(--line);padding-top:12px;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:700}
+
+/* why now */
+.why-grid{display:grid;grid-template-columns:1.07fr .93fr;gap:28px;align-items:stretch}
+.editorial-card{background:#fff;border:1px solid #e8e1d4;padding:38px;box-shadow:0 18px 55px rgba(26,34,40,.07)}
+.editorial-card p{font-size:15px;color:#3f4645;margin:0 0 15px}
+.award-strip{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid #e6ded0;border-bottom:1px solid #e6ded0;margin:25px 0}
+.award{padding:18px 14px;border-right:1px solid #e6ded0}
+.award:last-child{border-right:none}
+.award .year{font:500 25px Georgia,serif;color:var(--gold)}
+.award strong{display:block;font-size:12px;margin-top:4px;line-height:1.35}
+.award small{font-size:10px;color:#888}
+.award.dim{background:#f5f2ec}
+.hypothesis{margin-top:24px;background:var(--ink);color:#fff;padding:30px 32px;position:relative;overflow:hidden}
+.hypothesis:after{content:"“";position:absolute;right:18px;top:-28px;font:160px Georgia,serif;color:rgba(184,149,82,.12)}
+.hypothesis .label{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold2)}
+.hypothesis h3{font:500 26px/1.33 Georgia,serif;margin:9px 0 10px;max-width:620px}
+.hypothesis p{color:rgba(255,255,255,.68);margin:0;font-size:13px}
+.photo-stack{display:grid;grid-template-rows:1.08fr .92fr;gap:16px;min-height:690px}
+.photo{position:relative;overflow:hidden;background:#ddd;min-height:250px}
+.photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.photo:hover img{transform:scale(1.035)}
+.photo .caption{position:absolute;left:18px;bottom:16px;color:#fff;font-size:10px;letter-spacing:.12em;text-transform:uppercase;background:rgba(6,15,26,.55);backdrop-filter:blur(6px);padding:7px 10px}
+.insight-line{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#e4dccd;margin-top:28px;border:1px solid #e4dccd}
+.insight-line div{background:#f8f6f1;padding:19px 18px}
+.insight-line b{display:block;font-size:12px;color:var(--ink);margin-bottom:5px}
+.insight-line span{font-size:11px;color:#777}
+
+/* propose */
+.propose-layout{display:grid;grid-template-columns:.68fr 1.32fr;gap:42px;align-items:start}
+.sticky-note{position:sticky;top:94px}
+.sticky-note .big{font:500 44px/1.03 Georgia,serif;margin:0 0 16px}
+.sticky-note p{color:rgba(255,255,255,.66);font-size:14px}
+.micro-rule{height:1px;background:linear-gradient(90deg,var(--gold),transparent);margin:28px 0}
+.pill-dark{display:inline-flex;border:1px solid rgba(212,187,130,.35);color:var(--gold2);padding:7px 12px;border-radius:999px;font-size:10px;letter-spacing:.1em;text-transform:uppercase;margin-top:8px}
+.pillars{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.pillar{position:relative;padding:28px 28px 27px;border:1px solid rgba(255,255,255,.12);background:linear-gradient(145deg,rgba(255,255,255,.06),rgba(255,255,255,.018));min-height:210px;overflow:hidden}
+.pillar .n{font:500 35px Georgia,serif;color:var(--gold2);opacity:.88}
+.pillar h3{font:500 21px Georgia,serif;margin:9px 0 7px}
+.pillar p{font-size:12px;color:rgba(255,255,255,.60);margin:0}
+.pillar:after{content:"";position:absolute;right:-35px;bottom:-35px;width:115px;height:115px;border:1px solid rgba(184,149,82,.13);border-radius:50%}
+.journey{margin-top:30px;border-top:1px solid rgba(255,255,255,.13);padding-top:28px}
+.journey-top{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;margin-bottom:18px}
+.journey h3{font:500 28px Georgia,serif;margin:0}
+.journey-meta{font-size:11px;color:rgba(255,255,255,.55);letter-spacing:.08em}
+.days{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.day{padding:25px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.035)}
+.day .d{font-size:10px;letter-spacing:.2em;color:var(--gold2);font-weight:700}
+.day h4{font:500 18px/1.2 Georgia,serif;margin:7px 0 6px;text-transform:uppercase}
+.day b{font-size:13px;color:#fff}
+.day p{font-size:11px;color:rgba(255,255,255,.58);margin:7px 0 0}
+.secret{margin-top:14px;padding:18px 20px;border-left:2px solid var(--gold);background:rgba(184,149,82,.08);font-size:12px;color:rgba(255,255,255,.76)}
+.flow{margin-top:28px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.flow span{font:500 11px Georgia,serif;border:1px solid rgba(255,255,255,.11);padding:9px 12px;color:rgba(255,255,255,.77)}
+.flow i{color:var(--gold);font-style:normal}
+
+/* outcomes */
+.outcome-grid{display:grid;grid-template-columns:1.06fr .94fr;gap:32px}
+.outcome-list{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid #ded6c8;border-left:1px solid #ded6c8}
+.outcome{padding:23px 24px;border-right:1px solid #ded6c8;border-bottom:1px solid #ded6c8;background:#fff}
+.outcome b{font:700 10px/1.2 Arial,sans-serif;letter-spacing:.16em;color:var(--gold);display:block;margin-bottom:8px}
+.outcome h4{font:500 18px Georgia,serif;margin:0 0 6px}
+.outcome p{font-size:11px;color:#6f7471;margin:0}
+.time-card{background:var(--ink);color:#fff;padding:34px;position:relative;overflow:hidden;min-height:100%}
+.time-card:before{content:"";position:absolute;inset:auto -20% -25% 30%;height:70%;background:radial-gradient(circle,rgba(184,149,82,.17),transparent 62%)}
+.time-card .super{font:500 clamp(45px,6vw,82px)/.92 Georgia,serif;color:var(--gold2);letter-spacing:-.04em;margin:16px 0 22px}
+.time-card p{color:rgba(255,255,255,.68);font-size:13px;position:relative}
+.time-card blockquote{margin:26px 0 0;padding:20px 0;border-top:1px solid rgba(255,255,255,.15);border-bottom:1px solid rgba(255,255,255,.15);font:500 19px/1.45 Georgia,serif;position:relative}
+.northstar{margin-top:34px;display:grid;grid-template-columns:.8fr 1.2fr;gap:28px;align-items:center}
+.northstar-img{height:320px;overflow:hidden;position:relative}
+.northstar-img img{width:100%;height:100%;object-fit:cover}
+.northstar-copy h3{font:500 32px/1.1 Georgia,serif;margin:0 0 12px}
+.northstar-copy p{font-size:13px;color:#686f6d;margin:0 0 10px}
+.calibration{margin-top:34px;padding:30px 32px;background:#eee8dd;border-top:1px solid var(--gold);display:grid;grid-template-columns:1fr .95fr;gap:28px;align-items:start}
+.calibration h3{font:500 27px/1.18 Georgia,serif;margin:7px 0 10px}
+.calibration p{font-size:12px;color:#5f6664;margin:0 0 9px}
+.info-chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:15px}
+.info-chips span{background:#fff;border:1px solid #dfd6c7;padding:7px 10px;border-radius:999px;font-size:10px;color:#646a67}
+.final-line{margin-top:34px;border-top:1px solid #d7cebf;padding-top:26px;display:flex;justify-content:space-between;gap:24px;align-items:flex-end}
+.final-line .quote{font:500 clamp(24px,3vw,38px)/1.14 Georgia,serif;max-width:720px}
+.final-line small{display:block;color:#8b8e88;max-width:290px;font-size:9px;line-height:1.6;text-align:right}
+
+/* source ribbon */
+.source-note{font-size:9px;color:#979991;margin-top:18px}
+.source-note strong{color:#6b6f6b}
+
+/* reveal */
+.reveal{opacity:1;transform:none;transition:opacity .7s ease,transform .7s ease}
+.reveal.show{opacity:1;transform:none}
+
+@media(max-width:850px){
+ .shell{width:min(100% - 34px,720px)}
+ .nav a{display:none}
+ .hero-content,.why-grid,.propose-layout,.outcome-grid,.northstar,.calibration{grid-template-columns:1fr}
+ .hero-content{gap:34px;padding-top:100px}
+ .hero-side{border-left:0;border-top:1px solid rgba(255,255,255,.2);padding:25px 0 0;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+ .hero-side p{margin-bottom:0}
+ .section-head{grid-template-columns:1fr;gap:13px}
+ .pillars{grid-template-columns:1fr}
+ .photo-stack{min-height:540px}
+ .insight-line{grid-template-columns:1fr 1fr}
+ .sticky-note{position:static}
+ .outcome-list{grid-template-columns:1fr}
+ .days{grid-template-columns:1fr}
+ .award-strip{grid-template-columns:1fr 1fr}
+ .award:nth-child(2){border-right:none}
+ .award{border-bottom:1px solid #e6ded0}
+ .final-line{align-items:start;flex-direction:column}
+ .final-line small{text-align:left}
+}
+
+@media print{
+ @page{size:A4;margin:0}
+ body{background:#fff}
+ .rail,.scroll-cue{display:none!important}
+ .hero,.page{min-height:297mm;height:297mm;width:210mm;padding:18mm 15mm;page-break-after:always;overflow:hidden}
+ .hero{padding:0}
+ .hero-content{padding:26mm 15mm 18mm}
+ .hero h1{font-size:54pt}
+ .page-no{font-size:90pt}
+ .section-head{margin-bottom:8mm}
+ .section-head h2{font-size:28pt}
+ .editorial-card{padding:7mm}
+ .why-grid{gap:6mm}
+ .photo-stack{min-height:125mm}
+ .insight-line{margin-top:5mm}
+ .propose-layout{gap:7mm}
+ .pillar{min-height:42mm;padding:6mm}
+ .northstar-img{height:55mm}
+ .calibration{padding:6mm;margin-top:6mm}
+ .reveal{opacity:1!important;transform:none!important}
+}
+</style>
+</head>
+<body>
+<nav class="rail" id="rail">
+  <div class="rail-in">
+    <div class="brand-mini">THE BUTLER BLUEPRINT</div>
+    <div class="nav">
+      <a href="#why">01 WHY NOW</a><a href="#propose">02 WHAT WE PROPOSE</a><a href="#gains">03 WHAT V VILLAS GAINS</a>
+      <button class="print" onclick="window.print()">PRINT / SAVE PDF</button>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-bg"></div>
+  <div class="shell hero-content">
+    <div>
+      <div class="logo-card"><img src="assets/v-villas-logo.png" alt="V Villas Phuket MGallery logo"></div>
+      <div class="eyebrow">Executive Summary · Concept Preview</div>
+      <h1>The Butler <span>Blueprint</span></h1>
+      <p class="sub">จาก Award-Winning Hospitality สู่ Bespoke Service ที่ส่งมอบได้อย่างสม่ำเสมอ — ผ่านการพัฒนา Middle Management ที่ใช้ Digital & AI เพื่อเสริม “การรู้ใจ” ไม่ใช่แทนที่มัน</p>
+      <div class="tagline"><span class="pill">V Villas Phuket · MGallery Collection</span><span class="pill">2-Day Immersive Learning Journey</span><span class="pill">Middle Management · 15–20 คน</span></div>
+    </div>
+    <aside class="hero-side">
+      <div><div class="num">24/7</div><p>Butler Service เป็นส่วนหนึ่งของ guest proposition ในทุก private pool villa</p></div>
+      <div><div class="num">26</div><p>Private pool villas — จาก 1 ถึง 6 bedrooms บน Ao Yon Bay</p></div>
+      <div><div class="num">01</div><p>คำถามที่เราเริ่มจาก: Competitive Edge ถัดไปของ V Villas ควรเป็นอะไร?</p></div>
+    </aside>
+  </div>
+  <div class="scroll-cue">Scroll to discover</div>
+</header>
+
+<section class="page" id="why">
+  <div class="page-no">01</div>
+  <div class="shell">
+    <div class="section-head reveal">
+      <div class="kicker">WHY NOW</div>
+      <div><h2>จากความสำเร็จที่ได้รับการยอมรับ สู่ <span class="gold">Competitive Edge</span> ถัดไป</h2><p>เราไม่ได้เริ่มจากคำถามว่า “อยากให้สอนอะไร” แต่เริ่มจากสิ่งที่ V Villas ทำได้ดีอยู่แล้ว — และมองหาว่าความโดดเด่นนั้นจะถูกส่งต่อให้แข็งแรงขึ้นได้อย่างไร</p></div>
+    </div>
+
+    <div class="why-grid">
+      <article class="editorial-card reveal">
+        <div class="eyebrow">A STRATEGIC REFLECTION POINT</div>
+        <p>V Villas Phuket มีรากฐานที่แข็งแรงทั้ง Luxury Hospitality, Dining Experience และ Personalized Service โดยเฉพาะ 24-hour Butler Service ซึ่ง Factsheet ของโรงแรมระบุเป็นส่วนหนึ่งของประสบการณ์ในทุก villa.</p>
+        <div class="award-strip">
+          <div class="award"><div class="year">2023</div><strong>Best Breakfast or Brunch</strong><small>Condé Nast Johansens</small></div>
+          <div class="award"><div class="year">2024</div><strong>Best Dining Experience</strong><small>Condé Nast Johansens</small></div>
+          <div class="award"><div class="year">2025</div><strong>Best Restaurant</strong><small>Condé Nast Johansens</small></div>
+          <div class="award dim"><div class="year">2026</div><strong>A moment to ask “what next?”</strong><small>ไม่ตีความว่า standard ลดลง</small></div>
+        </div>
+        <p>การไม่ได้รับรางวัลในปีใดปีหนึ่งไม่ได้หมายความว่ามาตรฐานลดลง แต่เป็นจังหวะที่น่าสนใจสำหรับคำถามเชิงกลยุทธ์ว่า <b>Competitive Edge ถัดไปของ V Villas ควรเป็นอะไร?</b></p>
+        <p>จากการศึกษา Guest Voice สิ่งที่ถูกจดจำอย่างเด่นชัดคือ Butler — การตอบสนองเร็ว การวางแผนกิจกรรม การสร้าง Surprise การใส่ใจรายละเอียด และการคาดการณ์ความต้องการก่อนถูกขอ ขณะเดียวกันบางรีวิวสะท้อนโอกาสในการทำให้ประสบการณ์นั้นต่อเนื่องยิ่งขึ้น เช่น Pre-arrival handover, experience recommendation และ service recovery.</p>
+        <div class="hypothesis">
+          <div class="label">OUR WORKING HYPOTHESIS</div>
+          <h3>V Villas ไม่ได้ขาด Service Excellence — โอกาสสำคัญคือทำให้ Excellence ที่มีอยู่ <span class="gold">ถ่ายทอดและเกิดขึ้นได้อย่างสม่ำเสมอ</span></h3>
+          <p>ไม่ว่าจะเป็น Butler คนใด · อยู่ Shift ใด · Guest Journey เชื่อมต่อกี่แผนก · หรือวันที่ผู้ที่รู้จักแขกดีที่สุดไม่ได้อยู่ปฏิบัติงาน</p>
+        </div>
+      </article>
+
+      <div class="photo-stack reveal">
+        <figure class="photo" style="margin:0"><img src="assets/butler-service.webp" alt="V Villas butler service"><figcaption class="caption">The human moment · V Villas Factsheet</figcaption></figure>
+        <figure class="photo" style="margin:0"><img src="assets/akoya-star-lounge.webp" alt="Yon Ocean House"><figcaption class="caption">Award-winning foundation · Dining</figcaption></figure>
+      </div>
+    </div>
+
+    <div class="insight-line reveal">
+      <div><b>จาก “คนเก่ง”</b><span>ความรู้จำนวนมากอยู่ใน Tacit Knowledge</span></div>
+      <div><b>สู่ “ความรู้ของทีม”</b><span>Capture · Transfer · Retrieve</span></div>
+      <div><b>สู่ “Service Continuity”</b><span>ข้อมูลไม่ reset เมื่อคนหรือกะเปลี่ยน</span></div>
+      <div><b>สู่ “Guest Experience”</b><span>Technology สนับสนุน — Human Touch เป็นผู้ส่งมอบ</span></div>
+    </div>
+    <div class="source-note">ภาพและข้อมูล property อ้างอิงจาก <strong>V Villas Phuket – MGallery Collection Factsheet (19 Aug 2025)</strong>; award chronology ใช้เป็น strategic context ไม่ใช่ข้อสรุปสาเหตุของผลรางวัลปี 2026.</div>
+  </div>
+</section>
+
+<section class="page dark" id="propose">
+  <div class="page-no">02</div>
+  <div class="shell">
+    <div class="section-head reveal">
+      <div class="kicker">WHAT WE PROPOSE</div>
+      <div><h2>ไม่ใช่ AI Training — แต่คือ <span class="gold">AI-Enabled Luxury Service Leadership</span></h2><p>The Butler Blueprint ออกแบบให้ Middle Manager ใช้ Digital & AI เพื่อเก็บ ถ่ายทอด เชื่อมโยง และใช้ Service Knowledge โดยยังคงให้มนุษย์เป็นผู้สร้างประสบการณ์ให้แขก</p></div>
+    </div>
+
+    <div class="propose-layout">
+      <aside class="sticky-note reveal">
+        <div class="eyebrow">THE BUTLER BLUEPRINT</div>
+        <p class="big">เปลี่ยนความรู้ของคนเก่ง ให้กลายเป็นความสามารถของทีม</p>
+        <p>คำถามไม่ใช่ “AI ทำอะไรได้บ้าง” แต่คือ <b style="color:#fff">งานใดควรเป็นหน้าที่ของคน งานใดควรมี Technology สนับสนุน และเวลาที่ได้คืนมาจะถูกนำกลับไปสร้าง Guest Experience อย่างไร</b></p>
+        <div class="micro-rule"></div>
+        <span class="pill-dark">Technology should support the service</span>
+        <p style="font-family:Georgia,serif;font-size:18px;color:#fff;margin-top:14px">It should never become the service.</p>
+      </aside>
+
+      <div>
+        <div class="pillars reveal">
+          <div class="pillar"><div class="n">01</div><h3>Service Knowledge</h3><p>ทำให้ Guest Preference, Property Experience, Service Standard และวิธีจัดการสถานการณ์ไม่อยู่กับคนเพียงคนเดียว แต่สามารถเข้าถึง ถ่ายทอด และใช้ต่อได้</p></div>
+          <div class="pillar"><div class="n">02</div><h3>Service Continuity</h3><p>คนเปลี่ยนได้ แต่ประสบการณ์ของแขกไม่ควรถูก Reset — ตั้งแต่ Pre-arrival, cross-department coordination จนถึง Shift Handover</p></div>
+          <div class="pillar"><div class="n">03</div><h3>Anticipatory Service</h3><p>จากการ “ตอบสนอง” สู่การ “คิดล่วงหน้า” โดยใช้ข้อมูลและ AI เป็น Decision Support เพื่อสร้าง Personalized Experience ที่แม่นยำขึ้น</p></div>
+          <div class="pillar"><div class="n">04</div><h3>Manager as Service Orchestrator</h3><p>Middle Manager มองเห็น Invisible Work, จุดสูญเสียข้อมูล และโอกาสในการออกแบบ Workflow ที่ดีขึ้น พร้อมกำกับ Privacy, Accuracy และ Human Judgment</p></div>
+        </div>
+
+        <div class="journey reveal">
+          <div class="journey-top"><h3>2-Day Immersive Learning Journey</h3><div class="journey-meta">2 วันต่อเนื่อง · วันละ 6 ชั่วโมง · 15–20 คน</div></div>
+          <div class="days">
+            <div class="day"><div class="d">DAY 01</div><h4>From Individual Excellence to Team Intelligence</h4><b>จากความเก่งของบุคคล สู่ความรู้ของทีม</b><p>ทำความเข้าใจ Service Excellence, งานเบื้องหลัง Guest Experience และแนวทางใช้ Digital & AI เพื่อจัดการและถ่ายทอด Service Knowledge</p></div>
+            <div class="day"><div class="d">DAY 02</div><h4>From Team Intelligence to Consistent Guest Experience</h4><b>จากความรู้ของทีม สู่ประสบการณ์ที่สม่ำเสมอ</b><p>เปลี่ยนการเรียนรู้สู่การประยุกต์กับบริบท Luxury Hospitality เพื่อออกแบบแนวทางที่สามารถนำไปทดลองใช้กับงานจริง</p></div>
+          </div>
+          <div class="secret"><b>สิ่งที่ตั้งใจยังไม่เปิดทั้งหมดใน Executive Summary:</b> Scenario, Learning Mechanics, AI Workflow และ Prototype Framework จะออกแบบเฉพาะสำหรับ V Villas หลัง Calibration กับบริบทจริงของทีม — เพื่อให้ Learning Journey เป็น “ของ V Villas” ไม่ใช่ Course Template.</div>
+          <div class="flow"><span>Understand the Service</span><i>→</i><span>Capture the Knowledge</span><i>→</i><span>Improve the Workflow</span><i>→</i><span>Augment with Digital & AI</span><i>→</i><span>Return Time to the Guest</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="page" id="gains">
+  <div class="page-no">03</div>
+  <div class="shell">
+    <div class="section-head reveal">
+      <div class="kicker">WHAT V VILLAS GAINS</div>
+      <div><h2>วัดผลจาก <span class="gold">วิธีทำงานที่ดีขึ้น</span> ไม่ใช่จำนวน AI Tools ที่เรียน</h2><p>ความสำเร็จของ Learning Journey ควรปรากฏในความต่อเนื่องของความรู้ คุณภาพการตัดสินใจ การประสานงาน และเวลาที่ทีมสามารถกลับไปใช้กับแขก</p></div>
+    </div>
+
+    <div class="outcome-grid">
+      <div class="outcome-list reveal">
+        <div class="outcome"><b>SERVICE CONSISTENCY</b><h4>มาตรฐานเดินทางไปพร้อมกับทีม</h4><p>ความรู้และแนวปฏิบัติที่ดีถูกส่งต่อและเรียกใช้ได้ต่อเนื่อง</p></div>
+        <div class="outcome"><b>KNOWLEDGE CONTINUITY</b><h4>ความรู้ไม่หายไปพร้อมกับคน</h4><p>รองรับการเปลี่ยน Shift ผู้รับผิดชอบ และบุคลากรใหม่โดยไม่ Reset บริบท</p></div>
+        <div class="outcome"><b>BETTER DECISION SUPPORT</b><h4>เข้าถึงสิ่งที่ต้องรู้ได้เร็วขึ้น</h4><p>Manager และทีมมีข้อมูลประกอบการตัดสินใจที่พร้อมใช้มากขึ้น</p></div>
+        <div class="outcome"><b>CROSS-FUNCTIONAL EXPERIENCE</b><h4>แขกเห็นหนึ่ง Journey</h4><p>แม้ระบบหลังบ้านจะเชื่อมหลายแผนก แต่ทีมออกแบบประสบการณ์ร่วมกัน</p></div>
+        <div class="outcome"><b>MANAGER EMPOWERMENT</b><h4>ผู้นำที่พัฒนาระบบได้ต่อ</h4><p>Middle Manager เลือกใช้ Technology ให้เหมาะกับงานและกำกับการใช้ได้</p></div>
+        <div class="outcome"><b>HUMAN TOUCH</b><h4>คนยังเป็นผู้รู้ใจแขก</h4><p>AI ช่วยจัดการความซับซ้อน เพื่อให้มนุษย์มี Capacity สำหรับสิ่งที่ทดแทนไม่ได้</p></div>
+      </div>
+
+      <aside class="time-card reveal">
+        <div class="eyebrow">SIGNATURE MEASURE</div>
+        <div class="super">TIME<br>RETURNED<br>TO GUEST</div>
+        <p>เราไม่ต้องการวัดเพียงว่า “AI ช่วยประหยัดเวลากี่นาที” แต่จะมองต่อว่า เวลาที่ได้คืนมาถูกนำกลับไปสร้างคุณค่าให้แขกได้มากเพียงใด</p>
+        <blockquote>ลดเวลาของงานที่แขกไม่จำเป็นต้องเห็น เพื่อเพิ่มเวลาให้กับสิ่งที่แขกสัมผัสได้</blockquote>
+      </aside>
+    </div>
+
+    <div class="northstar reveal">
+      <figure class="northstar-img" style="margin:0"><img src="assets/luxury-hospitality.webp" alt="Akoya Star Lounge"><figcaption class="caption">From award-winning hospitality...</figcaption></figure>
+      <div class="northstar-copy"><div class="eyebrow">THE NEXT COMPETITIVE CAPABILITY</div><h3>From Award-Winning Hospitality<br><span class="gold">to Award-Worthy Service Experience</span></h3><p>V Villas มีรากฐาน Luxury Hospitality ที่แข็งแรง การพัฒนาครั้งนี้จึงไม่ได้เริ่มจากการ “แก้สิ่งที่ไม่ดี” แต่เริ่มจากคำถามว่า สิ่งที่ทำได้ดีมากอยู่แล้วจะถูกทำให้แข็งแรงและส่งต่อได้มากขึ้นอย่างไร</p><p>Service Consistency, Anticipatory Service และ Butler Knowledge อาจเป็น Competitive Capability ถัดไป — โดยใช้มาตรฐาน Luxury Hospitality เป็น North Star ไม่ใช่คำรับประกันผลรางวัล</p></div>
+    </div>
+
+    <div class="calibration reveal">
+      <div><div class="eyebrow">DESIGNED FROM UNDERSTANDING · REFINED WITH V VILLAS</div><h3>เริ่มจาก Insight ก่อน — แล้วค่อยทำให้แม่นด้วยบริบทจริง</h3><p>Executive Summary นี้พัฒนาจากข้อมูลที่ทีมศึกษาได้ล่วงหน้า เพื่อให้การสนทนาเริ่มจากสิ่งที่เราเห็น ไม่ใช่เริ่มจากคำถามว่า “ต้องการให้สอนอะไร”</p><p>ก่อนเริ่ม Learning Journey ทีมจะใช้ Discovery & Calibration ระยะสั้น เพื่อให้รายละเอียดสุดท้ายไม่ซ้ำกับระบบที่โรงแรมมีอยู่แล้ว และสะท้อนวิธีทำงานจริงของ V Villas มากที่สุด</p></div>
+      <div><p><b>ข้อมูลที่ V Villas มีอยู่แล้วและเห็นว่าสะดวกต่อการแลกเปลี่ยน</b> — ไม่ต้องจัดทำใหม่ และไม่จำเป็นต้องเป็นข้อมูลอ่อนไหว — จะช่วยให้ Scenario และ Prototype “เป็นของ V Villas” มากขึ้น เช่น</p><div class="info-chips"><span>บทบาทผู้เข้าร่วม</span><span>วิธีรับ–ส่งต่อ Guest Request</span><span>เครื่องมือ/ระบบที่ใช้อยู่</span><span>ตัวอย่างบริบทบริการ</span><span>ข้อจำกัด Data & Privacy</span></div><p style="margin-top:15px"><b>สิ่งที่มีอยู่แล้วเพียงพอ</b> ที่จะช่วยให้เราเปลี่ยนจาก “สิ่งที่คิดว่าใช่” ไปสู่ “สิ่งที่ตรงกับ V Villas จริง”</p></div>
+    </div>
+
+    <div class="final-line reveal"><div class="quote">ศึกษาให้เข้าใจ <span class="gold">→</span> ออกแบบให้ตรง <span class="gold">→</span> พัฒนาให้ใช้ได้จริง<br><span style="font-size:.62em;color:#6f746f">เป้าหมายไม่ใช่ทำให้ V Villas ใช้ AI มากขึ้น แต่คือทำให้ทีมมีเวลามากขึ้นสำหรับสิ่งที่ Technology ทดแทนไม่ได้ — <b>การรู้ใจแขก</b></span></div><small>ภาพทั้งหมดใน Executive Summary นี้นำมาจาก V Villas Phuket – MGallery Collection Factsheet ที่ผู้ใช้จัดเตรียมไว้เพื่อการออกแบบ Concept Preview.</small></div>
+  </div>
+</section>
+
+<script>
+const rail=document.getElementById('rail');
+addEventListener('scroll',()=>rail.classList.toggle('scrolled',scrollY>40));
+if ('IntersectionObserver' in window) {
+  const io=new IntersectionObserver((entries)=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.08});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+}
+</script>
+</body>
+</html>
